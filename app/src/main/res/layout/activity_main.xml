@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="30dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnnew"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nuev@"
+            android:background="@drawable/btnbackground"
+            android:layout_margin="10dp"
+            android:layout_marginHorizontal="10dp"/>
+
+        <RadioGroup android:id="@+id/rdgrp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:visibility="gone">
+            <RadioButton android:id="@+id/rdnota"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nota"
+                android:layout_marginRight="10dp"
+                android:buttonTint="#6a1b9a"/>
+            <RadioButton android:id="@+id/rdrec"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="#6a1b9a"
+                android:text="Recordatorio"/>
+        </RadioGroup>
+
+
+        <LinearLayout android:id="@+id/notalayaut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/notabackground"
+            android:visibility="gone">
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Color de la nota:"/>
+            <LinearLayout android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:background="@drawable/toolbar_background"
+                android:orientation="horizontal">
+                <ImageButton android:id="@+id/redColor"
+                    android:layout_width="58dp"
+                    android:layout_height="58dp"
+                    android:layout_margin="6dp"
+                    android:background="@drawable/red_background"/>
+                <ImageButton android:id="@+id/blueColor"
+                    android:layout_width="58dp"
+                    android:layout_height="58dp"
+                    android:layout_margin="6dp"
+                    android:background="@drawable/blue_background"/>
+                <ImageButton android:id="@+id/greenColor"
+                    android:layout_width="58dp"
+                    android:layout_height="58dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/green_background"/>
+                <ImageButton android:id="@+id/purplecolor"
+                    android:layout_width="58dp"
+                    android:layout_height="58dp"
+                    android:layout_margin="6dp"
+                    android:background="@drawable/purple_background"/>
+                <ImageButton android:id="@+id/whiteColor"
+                    android:layout_width="58dp"
+                    android:layout_height="58dp"
+                    android:layout_margin="6dp"
+                    android:background="@drawable/white_background"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nota:"
+                    android:layout_marginLeft="10dp"/>
+
+                <EditText android:id="@+id/txtnota"
+                    android:layout_width="326dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"/>
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnNoteCreate"
+                android:layout_width="107dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/btnback"
+                android:gravity="center"
+                android:text="Crear Nota"
+                android:textColor="#F3E5F5"
+                android:layout_marginBottom="10dp"/>
+        </LinearLayout> <!--end linear layaout nota-->
+
+
+
+        <LinearLayout android:id="@+id/reclayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/toolbar_background"
+            android:visibility="gone"
+            android:backgroundTint="#F3E5F5">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Recordar:"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fecha"/>
+
+                <EditText  android:id="@+id/capfecha"
+                    android:hint="Fecha del evento"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="date"
+                    android:focusable="false"
+                    android:clickable="true"
+                    android:maxLines="1" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnRecCreate"
+                android:layout_width="171dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/btnback"
+                android:gravity="center"
+                android:text="Crear Recordatorio"
+                android:layout_marginBottom="10dp"
+                android:textColor="#F3E5F5" />
+
+        </LinearLayout> <!-- end linear layapout recordatorio   -->
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recylcerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </LinearLayout> <!--End of area -->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

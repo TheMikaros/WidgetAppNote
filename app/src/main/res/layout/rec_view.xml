@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout android:id="@+id/reclayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black_overlay">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="259dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/btnbackground" />
+
+        <ImageView
+            android:id="@+id/circle"
+            android:layout_width="81dp"
+            android:layout_height="73dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/circle" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnlist"
+            android:layout_width="49dp"
+            android:layout_height="49dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="47dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/list" />
+
+        <TextView
+            android:id="@+id/fechrec"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="40dp"
+            android:layout_toRightOf="@id/circle"
+            android:text="Fecha Evento"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/rectext"
+            android:layout_width="317dp"
+            android:layout_height="121dp"
+            android:layout_below="@id/circle"
+            android:layout_marginLeft="-76dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/circle"
+            android:text="hOLA MUNDI" />
+
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
